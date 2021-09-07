@@ -39,7 +39,7 @@
                     <span>设备配置</span><input {% if server_form.errors.zcpz %}class="input-error"{% endif %} type="text" name="zcpz" value="{{ server.zcpz }}" placeholder="不超过100个字符"/>
                 </div>
                 <div class="form-list">
-                    <span>*管理人员</span>
+                    <span>*归属人员</span>
                     <select name="owner">
                         <option value="0" {% if not server.owner.id %}selected{% endif %}>空</option>
                         {% for user in users %}
@@ -92,7 +92,7 @@
                     <th>设备型号</th>
                     <th>设备序号</th>
                     <th>设备配置</th>
-                    <th>管理人员</th>
+                    <th>归属人员</th>
                     <th>所在网络</th>
                     <th>保修期</th>
                     <th>备注</th>

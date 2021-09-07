@@ -210,7 +210,7 @@ class ServerExportView(LoginRequiredMixin, View):
         servers = servers.values('id', 'zctype__zctype', 'ipaddress', 'description', 'brand', 'zcmodel', 'zcnumber',
                                  'zcpz', 'owner__username', 'undernet', 'guartime', 'comment')
         colnames = ['序号', '资产类型', 'IP地址', '功能描述', '设备品牌', '设备型号', '设备序号', '设备配置',
-                    '管理人员', '所在网络', '保修期', '备注']
+                    '归属人员', '所在网络', '保修期', '备注']
         response = create_excel(colnames, servers, 'zcgl')
         return response
 
